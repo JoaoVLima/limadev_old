@@ -1,11 +1,6 @@
 import Core from './core'
 import * as THREE from "three";
 import {PLYLoader} from "three/examples/jsm/loaders/PLYLoader";
-import {OBJLoader} from "three/examples/jsm/loaders/OBJLoader";
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
-import { KTX2Loader } from 'three/examples/jsm/loaders/KTX2Loader.js';
-// import { MeshoptDecoder } from 'three/examples/jsm/libs/meshopt_decoder.module.js';
-const MeshoptDecoder = require('three/examples/jsm/libs/meshopt_decoder.module.js');
 
 
 function init(){
