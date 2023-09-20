@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/*font-family: 'Josefin Sans', sans-serif;*/
+/*font-family: 'Roboto', sans-serif;*/
+/*font-family: 'Roboto Mono', monospace;*/
+
+@font-face {
+    font-family: 'Tolkien';
+    src: URL('/static/tolkien.ttf') format('truetype');
+  }
+
+:root {
+    --color-primary: #0d6efd;
+    --color-secondary: #6c757d;
+    --color-tertiary: #6c757d;
+    --color-neutral: #6c757d;
+
+    --color-success: #198754;
+    --color-info: #0dcaf0;
+    --color-warning: #ffc107;
+    --color-danger: #dc3545;
+
+    --color-font-primary: #f8f9fa;
+    --color-font-secondary: #f8f9fa;
+    --color-font-tertiary: #f8f9fa;
+
+
+    --color-bg: #fff;
+
+    --font-primary: 'Josefin Sans', sans-serif;
+    --font-secondary: 'Roboto', sans-serif;
+    --font-tertiary: sans-serif;
+    --font-logo: 'Tolkien', sans-serif;
+    --font-monospace: 'Roboto Mono', monospace;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-bg);
+    background-image: url("https://i1.sndcdn.com/artworks-7ffnfhEHoFzB3Egm-Qcz2eQ-t300x300.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+
+    font-family: var(--font-secondary);
+    color: #272727;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+	overflow-y: scroll;
+	scroll-snap-type: y mandatory;
+    z-index: 0;
+}
+
+#ThreeCanvas {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+main::-webkit-scrollbar {
+    display: none;
+}
+
+main {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+	scroll-snap-align: start;
+}
+
+.progress-bar {
+    position: fixed;
+    right: 2vw;
+    background-color: white;
+    height: 100vh;
+    width: 5px;
+}
+
+.progress-bar .progress {
+    position: fixed;
+    background-color: gray;
+    height: 0;
+    width: 5.8px;
+}
+
+.grid-container {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: minmax(0, 1fr);
+    grid-template-areas:
+        'left middle right'
+        'left middle right'
+        'left middle right';
+
+    pointer-events: none;
+}
+
+.grid-left{
+    grid-area: left;
+}
+
+.grid-middle{
+    grid-area: middle;
+}
+
+.grid-right{
+    grid-area: right;
+}
+
+
+.grid-item {
+    position: relative;
+    padding: 1rem;
+    z-index: 1;
+}
+
+.grid-item h1,
+.grid-item h2,
+.grid-item h3,
+.grid-item h4,
+.grid-item h5,
+.grid-item h6,
+.grid-item p,
+.grid-item img,
+.grid-item a,
+.grid-item i
+{
+    pointer-events: all;
+}
+
+.logo {
+    width: clamp(100px, 15vw, 250px);
+    filter: invert(1);
+}
+
+header ul {
+    width: clamp(100px, 15vw, 250px);
+    position: absolute;
+    bottom: 15vh;
+    left: 0;
+}
+
+footer ul {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+footer p {
+    font-size: clamp(0.1vw, 0.5vw, 2vw);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: gray;
+}
+
+section h1 {
+    font-family: var(--font-primary);
+    font-size: 2.9vw;
+    font-weight: normal;
+    text-align: center;
+    margin-top: 12vh;
+}
+
+section p {
+    font-size: 1vw;
+    text-align: justify;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+
+}
+
+.wrapper-main p {
+    margin-top: 52vh;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    line-height: 1.4rem;
+}
+
+.wrapper-main .icons {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* 'sm' applies to x-small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+
+}
+
+/* 'md' applies to small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+
+}
+
+/* 'lg' applies to medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+    .grid-container {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: minmax(0, 0.1fr) minmax(0, 0.8fr) minmax(0, 0.1fr);
+        grid-template-areas:
+            'left left left'
+            'middle middle middle'
+            'right right right'
+    }
+
+    .grid-item {
+        width: 100vw;
+    }
+
+    footer,
+    .progress-bar,
+    .progress,
+    header > ul {
+        display: none;
+    }
+
+    section h1 {
+        margin-top: 0vh;
+    }
+
+    .wrapper-main p {
+        margin-top: 45vh;
+    }
+
+}
+
+/* 'xl' applies to large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+
+}
+
+/* 'xxl' applies to x-large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {
+
+}
