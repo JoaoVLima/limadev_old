@@ -1,13 +1,17 @@
 import * as THREE from 'three';
-// import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js';
+import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js';
+//import {EffectComposer} from 'three/examples/jsm/postprocessing/EffectComposer.js';
+//import {RenderPixelatedPass} from 'three/examples/jsm/postprocessing/RenderPixelatedPass.js';
+//import {OutputPass} from 'three/examples/jsm/postprocessing/OutputPass.js';
+
 
 export default class Core {
     public scene: THREE.Scene;
-    public camera: THREE.PerspectiveCamera;
+    public camera: THREE.Camera;
     public lights: THREE.Light[];
     public objects: THREE.Mesh[];
     public renderer: THREE.WebGLRenderer;
-    // public controls: OrbitControls;
+    public controls: OrbitControls;
 
     constructor() {
         this.scene = this.initScene();
@@ -15,35 +19,40 @@ export default class Core {
         this.lights = this.initLights();
         this.objects = this.initObjects();
         this.renderer = this.initRenderer();
-        // this.controls = this.initControls();
+        this.controls = this.initControls();
     }
 
     /* 📦 Scene */
     private initScene(): THREE.Scene {
         const scene = new THREE.Scene();
 
-        // const path = 'media/background/';
-        // const format = '.png';
-        // const urls = [
-        //     path + 'px' + format, path + 'nx' + format,
-        //     path + 'py' + format, path + 'ny' + format,
-        //     path + 'pz' + format, path + 'nz' + format
-        // ];
-        //
-        // const textureCube = new THREE.CubeTextureLoader().load( urls );
-        //
-        // scene.background = textureCube;
+//         const path = 'media/background/';
+//         const format = '.png';
+//         const urls = [
+//             path + 'px' + format, path + 'nx' + format,
+//             path + 'py' + format, path + 'ny' + format,
+//             path + 'pz' + format, path + 'nz' + format
+//         ];
+//
+//         const textureCube = new THREE.CubeTextureLoader().load( urls );
 
+//         scene.background = textureCube;
 
-        scene.background = new THREE.Color( 0xfefefe );
+        scene.background = new THREE.Color( 0x151729 );
         return scene;
     }
 
     /* 🎥 Camera */
-    private initCamera(): THREE.PerspectiveCamera {
-        const camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 1, 200);
-        camera.position.set(0, -0.5, 8);
-        camera.lookAt(new THREE.Vector3(0, -0.5, 0))
+    private initCamera(): THREE.Camera {
+//        const camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 1, 200);
+//        camera.position.set(0, -0.5, 8);
+//        camera.lookAt(new THREE.Vector3(0, -0.5, 0))
+//
+        const aspectRatio = window.innerWidth / window.innerHeight;
+        const camera = new THREE.OrthographicCamera( - aspectRatio, aspectRatio, 1, - 1, 0.1, 10 );
+        camera.position.y = 2 * Math.tan( Math.PI / 6 );
+        camera.position.z = 2;
+
         return camera;
     }
 
@@ -83,7 +92,7 @@ export default class Core {
 
         // create a material with the texture
         const material = new THREE.MeshStandardMaterial();
-        material.color = new THREE.Color( 0xffffff )
+        material.color = new THREE.Color(0xffffff)
 
         material.emissive.setHex(0x1e1e1e)
 
@@ -92,25 +101,6 @@ export default class Core {
         mesh.position.set(0,0,0);
         mesh.name = 'album';
         objects.push(mesh)
-
-
-
-        // create a plane geometry
-        // const geometry2 = new THREE.BoxGeometry(1, 1,0.1);
-        //
-        // // create a material with the texture
-        // const material2 = new THREE.MeshBasicMaterial();
-        //
-        // // create a mesh with the geometry and material
-        // const mesh2 = new THREE.Mesh(geometry2, material2);
-        // mesh2.position.set(4,4,-9);
-        // mesh2.name = 'moon';
-        //
-        // let texture2 = new THREE.TextureLoader().load('https://static.vecteezy.com/system/resources/thumbnails/000/602/084/small/7_-_New_Moon.jpg');
-        // mesh2.material.map = texture2;
-        // mesh2.material.needsUpdate = true;
-        //
-        // objects.push(mesh2)
 
         objects.forEach((object: THREE.Mesh) => {
             this.scene.add(object)
@@ -125,21 +115,25 @@ export default class Core {
             canvas: document.getElementById("ThreeCanvas") as HTMLCanvasElement,
             antialias: true,
         });
+        renderer.shadowMap.enabled = true;
         renderer.setPixelRatio(window.devicePixelRatio);
         renderer.setSize(window.innerWidth, window.innerHeight);
 
         document.body.appendChild(renderer.domElement);
+
+
+
         return renderer;
     }
 
     /* 🎮 Controls */
-    // private initControls(): OrbitControls {
-    //     const controls = new OrbitControls(this.camera, this.renderer.domElement);
-    //     controls.minDistance = 1;
-    //     controls.maxDistance = 100;
-    //     controls.maxPolarAngle = Math.PI / 2;
-    //     controls.target.set(0, 0, 0);
-    //     controls.update();
-    //     return controls;
-    // }
+    private initControls(): OrbitControls {
+        const controls = new OrbitControls(this.camera, this.renderer.domElement);
+        controls.minDistance = 1;
+        controls.maxDistance = 100;
+        controls.maxPolarAngle = Math.PI / 2;
+        controls.target.set(0, 0, 0);
+        controls.update();
+        return controls;
+    }
 }

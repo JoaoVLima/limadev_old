@@ -3,11 +3,6 @@
 /*font-family: 'Roboto', sans-serif;*/
 /*font-family: 'Roboto Mono', monospace;*/
 
-@font-face {
-    font-family: 'Tolkien';
-    src: URL('/static/tolkien.ttf') format('truetype');
-  }
-
 :root {
     --color-primary: #0d6efd;
     --color-secondary: #6c757d;
@@ -29,7 +24,6 @@
     --font-primary: 'Josefin Sans', sans-serif;
     --font-secondary: 'Roboto', sans-serif;
     --font-tertiary: sans-serif;
-    --font-logo: 'Tolkien', sans-serif;
     --font-monospace: 'Roboto Mono', monospace;
 }
 
@@ -39,7 +33,6 @@
 
 body {
     background-color: var(--color-bg);
-    background-image: url("https://i1.sndcdn.com/artworks-7ffnfhEHoFzB3Egm-Qcz2eQ-t300x300.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
