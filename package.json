@@ -1,5 +1,5 @@
 {
-    "name": "Lima.dev",
+    "name": "limadev",
     "version": "1.0.0",
     "description": "Lima.dev website, developed with three.js using typescript and vite.js",
     "keywords": [
@@ -36,17 +36,17 @@
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "devDependencies": {
-        "@tweakpane/core": "^1.1.4",
-        "@tweakpane/plugin-essentials": "^0.1.8",
-        "@types/dat.gui": "^0.7.7",
-        "@types/three": "^0.149.0",
-        "dat.gui": "^0.7.9",
-        "node": "^19.6.0",
-        "npm": "^9.4.1",
-        "three": "^0.149.0",
-        "tweakpane": "^3.1.4",
+        "@tweakpane/core": "^2.0.1",
+        "@tweakpane/plugin-camerakit": "^0.3.0",
+        "@tweakpane/plugin-essentials": "^0.2.0",
+        "@types/node": "^20.7.0",
+        "@types/three": "^0.156.0",
+        "node": "^20.7.0",
+        "npm": "^10.1.0",
+        "three": "^0.156.1",
+        "tweakpane": "^4.0.1",
         "typescript": "^4.9.5",
-        "vite": "^4.1.4",
+        "vite": "^4.4.9",
         "vite-plugin-glsl": "^1.1.2"
     }
 }

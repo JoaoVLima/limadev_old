@@ -1,16 +1,8 @@
 import Core from './core';
- import {Pane} from 'tweakpane';
- import * as EssentialsPlugin from '@tweakpane/plugin-essentials';
+import {Pane} from 'tweakpane';
+import * as EssentialsPlugin from '@tweakpane/plugin-essentials';
 
-// function clamp(num: number, min: number, max: number): number {
-//     return num < min
-//             ? max
-//             : num > max
-//             ? min
-//             : num;
-// }
-
-async function init() {
+function init() {
     const core = new Core();
     const camera = core.camera;
     const scene = core.scene;
@@ -24,12 +16,30 @@ async function init() {
        lineCount: 2,
      });
 
-    let render = function () {
+     const PARAMS = {
+         factor: 123,
+         title: 'hello',
+         color: '#ff0055',
+     };
+
+     pane.addBinding(PARAMS, 'factor');
+     pane.addBinding(PARAMS, 'title');
+     pane.addBinding(PARAMS, 'color');
+
+    let render = () => {
         fpsGraph.begin();
         renderer.render(scene, camera);
         fpsGraph.end();
     };
     renderer.setAnimationLoop(render);
+
+    let onWindowResize = () => {
+        camera.aspect = window.innerWidth / window.innerHeight
+        camera.updateProjectionMatrix()
+        renderer.setSize(window.innerWidth, window.innerHeight)
+        render();
+    }
+    window.addEventListener('resize', onWindowResize, false)
 
 }
 init();

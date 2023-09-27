@@ -1,9 +1,6 @@
 import * as THREE from 'three';
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js';
-//import {EffectComposer} from 'three/examples/jsm/postprocessing/EffectComposer.js';
-//import {RenderPixelatedPass} from 'three/examples/jsm/postprocessing/RenderPixelatedPass.js';
-//import {OutputPass} from 'three/examples/jsm/postprocessing/OutputPass.js';
-
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
 export default class Core {
     public scene: THREE.Scene;
@@ -44,15 +41,9 @@ export default class Core {
 
     /* 🎥 Camera */
     private initCamera(): THREE.Camera {
-//        const camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 1, 200);
-//        camera.position.set(0, -0.5, 8);
-//        camera.lookAt(new THREE.Vector3(0, -0.5, 0))
-//
-        const aspectRatio = window.innerWidth / window.innerHeight;
-        const camera = new THREE.OrthographicCamera( - aspectRatio, aspectRatio, 1, - 1, 0.1, 10 );
-        camera.position.y = 2 * Math.tan( Math.PI / 6 );
-        camera.position.z = 2;
-
+        const camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 1, 200);
+        camera.position.set(0, 0, 8);
+        camera.lookAt(new THREE.Vector3(0, 0, 0))
         return camera;
     }
 
@@ -60,21 +51,15 @@ export default class Core {
     private initLights(): THREE.Light[] {
         let lights: THREE.Light[] = []
 
-        // const ambient = new THREE.HemisphereLight(0xffffff, 0xffffff, 1);
-        // lights.push(ambient)
+        const ambient = new THREE.HemisphereLight(0xffffff, 0xffffff, 100);
+        lights.push(ambient)
 
-        // const loader = new THREE.TextureLoader().setPath('./media/');
-        // const texture = loader.load('disturb.jpg');
-        // texture.minFilter = THREE.LinearFilter;
-        // texture.magFilter = THREE.LinearFilter;
-        // texture.encoding = THREE.sRGBEncoding;
+//        const spotLight = new THREE.SpotLight(0xffffff, 4);
+//        spotLight.position.set(0, 4, 4);
+//        lights.push(spotLight)
 
-        const spotLight = new THREE.SpotLight( 0xffffff, 1 );
-        spotLight.position.set(0, 0, 4);
-        lights.push(spotLight)
-
-        // const spotLightHelper = new THREE.SpotLightHelper(spotLight);
-        // this.scene.add(spotLightHelper)
+//        const spotLightHelper = new THREE.SpotLightHelper(spotLight);
+//        this.scene.add(spotLightHelper)
 
         lights.forEach((light: THREE.Light) => {
             this.scene.add(light)
@@ -87,20 +72,14 @@ export default class Core {
     private initObjects(): THREE.Mesh[] {
         let objects: THREE.Mesh[] = []
 
-        // create a plane geometry
-        const geometry = new THREE.BoxGeometry(2, 2,0.1);
+        let loader = new GLTFLoader();
 
-        // create a material with the texture
-        const material = new THREE.MeshStandardMaterial();
-        material.color = new THREE.Color(0xffffff)
-
-        material.emissive.setHex(0x1e1e1e)
-
-        // create a mesh with the geometry and material
-        const mesh = new THREE.Mesh(geometry, material);
-        mesh.position.set(0,0,0);
-        mesh.name = 'album';
-        objects.push(mesh)
+        loader.load( 'media/the_great_drawing_room.glb', (gltf) => {
+            let mouse = gltf.scene;
+            mouse.scale.set(1, 1, 1);
+            mouse.position.set(0, 0, -4);
+            this.scene.add(mouse);
+        });
 
         objects.forEach((object: THREE.Mesh) => {
             this.scene.add(object)
@@ -121,8 +100,6 @@ export default class Core {
 
         document.body.appendChild(renderer.domElement);
 
-
-
         return renderer;
     }
 
@@ -131,6 +108,7 @@ export default class Core {
         const controls = new OrbitControls(this.camera, this.renderer.domElement);
         controls.minDistance = 1;
         controls.maxDistance = 100;
+        controls.maxZoom = 2;
         controls.maxPolarAngle = Math.PI / 2;
         controls.target.set(0, 0, 0);
         controls.update();
