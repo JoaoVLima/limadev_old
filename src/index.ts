@@ -14,7 +14,6 @@ function init() {
     });
     pane.refresh();
 
-
     let render = () => {
         fpsGraph.begin();
         renderer.render(scene, camera);

@@ -2,14 +2,8 @@ import * as THREE from 'three';
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js';
 import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js';
 import {RoomEnvironment} from 'three/examples/jsm/environments/RoomEnvironment.js';
-import {Pane, FolderApi} from 'tweakpane';
+import {Pane} from 'tweakpane';
 import * as EssentialsPlugin from '@tweakpane/plugin-essentials';
-
-
-export interface pane_interface {
-    object?: Pane;
-    folders?: FolderApi[]
-}
 
 export default class Core {
     public scene: THREE.Scene;
