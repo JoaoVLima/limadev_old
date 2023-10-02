@@ -7,7 +7,7 @@ import * as EssentialsPlugin from '@tweakpane/plugin-essentials';
 
 export default class Core {
     public scene: THREE.Scene;
-    public camera: THREE.Camera;
+    public camera: THREE.PerspectiveCamera;
     public lights: THREE.Light[];
     public objects: THREE.Mesh[];
     public renderer: THREE.WebGLRenderer;
@@ -22,7 +22,6 @@ export default class Core {
         this.objects = this.initObjects();
         this.renderer = this.initRenderer();
         this.controls = this.initControls();
-
     }
 
     /* 📦 Scene */
@@ -48,10 +47,33 @@ export default class Core {
     }
 
     /* 🎥 Camera */
-    private initCamera(): THREE.Camera {
-        const camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 1, 200);
-        camera.position.set(0, 0, 0);
-//        camera.lookAt(0, 0, 0);
+    private initCamera(): THREE.PerspectiveCamera {
+        const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000);
+        camera.position.set(10.20, 2.36, 5.25);
+        this.pane.addBinding(camera.position, 'x', {
+            step: 0.01,
+        });
+        this.pane.addBinding(camera.position, 'y', {
+            step: 0.01,
+        });
+        this.pane.addBinding(camera.position, 'z', {
+            step: 0.01,
+        });
+
+        camera.lookAt(camera.position.x,10,camera.position.z);
+
+        camera.rotation.z = -Math.PI/2;
+
+        this.pane.addBinding(camera.rotation, 'x', {
+            step: 0.01,
+        });
+        this.pane.addBinding(camera.rotation, 'y', {
+            step: 0.01,
+        });
+        this.pane.addBinding(camera.rotation, 'z', {
+            step: 0.01,
+        });
+
         return camera;
     }
 
@@ -160,6 +182,9 @@ export default class Core {
         controls.maxZoom = 2;
 //        controls.maxPolarAngle = Math.PI / 2;
         controls.target.set(0, 0, 0);
+
+        controls.enabled = false;
+
         controls.update();
         return controls;
     }

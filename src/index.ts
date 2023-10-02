@@ -6,7 +6,7 @@ function init() {
     const scene = core.scene;
     const renderer = core.renderer;
     const pane = core.pane;
-    const fpsGraph = pane.addBlade({
+    const fpsGraph: any = pane.addBlade({
         index: 0,
         view: 'fpsgraph',
         label: 'fpsgraph',
