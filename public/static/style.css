@@ -1,7 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Outfit&family=Parisienne&display=swap');
 /*font-family: 'Josefin Sans', sans-serif;*/
 /*font-family: 'Roboto', sans-serif;*/
 /*font-family: 'Roboto Mono', monospace;*/
+/*font-family: 'Outfit', sans-serif;*/
+/*font-family: 'Parisienne', cursive;*/
+
+/* :root {
+    --color-1: #a6445d;
+    --color-2: #021c41;
+    --color-3: #142f40;
+    --color-4: #d89b65;
+    --color-5: #bf835f;
+}
+
+:root {
+    --raisin-black: #373035ff;
+    --kobicha: #623A1Aff;
+    --raw-umber: #8E6036ff;
+    --bistre: #452816ff;
+    --umber: #5C483Eff;
+} */
+
 
 @media (prefers-color-scheme: dark) {
     :root {
@@ -60,7 +80,7 @@
 
     --font-primary: 'Josefin Sans', sans-serif;
     --font-secondary: 'Roboto', sans-serif;
-    --font-tertiary: sans-serif;
+    --font-tertiary: 'Parisienne', cursive;
     --font-monospace: 'Roboto Mono', monospace;
 }
 
@@ -230,6 +250,15 @@ a {
 
 a:hover {
     color: gray;
+}
+
+h1 {
+    font-family: var(--font-tertiary);
+    font-size: 8vw;
+    font-weight: normal;
+    text-align: center;
+    margin-top: 12vh;
+    color: #a28169;
 }
 
 section h1 {

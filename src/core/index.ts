@@ -6,41 +6,44 @@ import {Pane} from 'tweakpane';
 import * as EssentialsPlugin from '@tweakpane/plugin-essentials';
 
 export default class Core {
+    public loading: THREE.LoadingManager;
     public scene: THREE.Scene;
     public camera: THREE.PerspectiveCamera;
     public lights: THREE.Light[];
     public objects: THREE.Mesh[];
     public renderer: THREE.WebGLRenderer;
-    public controls: OrbitControls;
+    // public controls: OrbitControls;
     public pane: Pane;
 
     constructor() {
+        this.loading = this.initLoading();
         this.pane = this.initPane();
         this.scene = this.initScene();
         this.camera = this.initCamera();
         this.lights = this.initLights();
         this.objects = this.initObjects();
         this.renderer = this.initRenderer();
-        this.controls = this.initControls();
+        // if (process.env.NODE_ENV === 'development') {}
+        // this.controls = this.initControls();
     }
 
     /* 📦 Scene */
     private initScene(): THREE.Scene {
         const scene = new THREE.Scene();
 
-//         const path = 'media/background/';
-//         const format = '.png';
-//         const urls = [
-//             path + 'px' + format, path + 'nx' + format,
-//             path + 'py' + format, path + 'ny' + format,
-//             path + 'pz' + format, path + 'nz' + format
-//         ];
-//
-//         const textureCube = new THREE.CubeTextureLoader().load( urls );
+        // const path = 'media/background/';
+        // const format = '.png';
+        // const urls = [
+        //     path + 'px' + format, path + 'nx' + format,
+        //     path + 'py' + format, path + 'ny' + format,
+        //     path + 'pz' + format, path + 'nz' + format
+        // ];
 
-//         scene.background = textureCube;
+        // const textureCube = new THREE.CubeTextureLoader().load( urls );
 
-        scene.add(new THREE.AxesHelper(5))
+        // scene.background = textureCube;
+
+        // scene.add(new THREE.AxesHelper(5))
 
         scene.background = new THREE.Color( 0x151729 );
         return scene;
@@ -49,7 +52,7 @@ export default class Core {
     /* 🎥 Camera */
     private initCamera(): THREE.PerspectiveCamera {
         const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000);
-        camera.position.set(10.20, 2.36, 5.25);
+        camera.position.set(10.20, 2.36, 5.36);
         this.pane.addBinding(camera.position, 'x', {
             step: 0.01,
         });
@@ -81,15 +84,15 @@ export default class Core {
     private initLights(): THREE.Light[] {
         let lights: THREE.Light[] = [];
 
-//        const ambient = new THREE.HemisphereLight(0xffffff, 0xffffff, 0.1);
-//        lights.push(ambient);
+        // const ambient = new THREE.HemisphereLight(0xffffff, 0xffffff, 0.1);
+        // lights.push(ambient);
 
-//        const spotLight = new THREE.SpotLight(0xff00ff, 100, 10);
-//        spotLight.position.set(0, 4, 4);
-//        lights.push(spotLight);
-//
-//        const spotLightHelper = new THREE.SpotLightHelper(spotLight);
-//        this.scene.add(spotLightHelper);
+        // const spotLight = new THREE.SpotLight(0xff00ff, 100, 10);
+        // spotLight.position.set(0, 4, 4);
+        // lights.push(spotLight);
+
+        // const spotLightHelper = new THREE.SpotLightHelper(spotLight);
+        // this.scene.add(spotLightHelper);
 
         lights.forEach((light: THREE.Light) => {
             this.scene.add(light);
@@ -134,12 +137,12 @@ export default class Core {
             console.log(error);
         });
 
-//        const geometry = new THREE.BoxGeometry()
-//        const material = new THREE.MeshStandardMaterial({
-//            color: 0xffffff
-//        })
-//        const cube = new THREE.Mesh(geometry, material)
-//        objects.push(cube);
+        // const geometry = new THREE.BoxGeometry()
+        // const material = new THREE.MeshStandardMaterial({
+        //     color: 0xffffff
+        // })
+        // const cube = new THREE.Mesh(geometry, material)
+        // objects.push(cube);
 
         objects.forEach((object: THREE.Mesh) => {
             this.scene.add(object);
@@ -180,8 +183,8 @@ export default class Core {
         controls.minDistance = 1;
         controls.maxDistance = 100;
         controls.maxZoom = 2;
-//        controls.maxPolarAngle = Math.PI / 2;
-        controls.target.set(0, 0, 0);
+        // controls.maxPolarAngle = Math.PI / 2;
+        controls.target.set(this.camera.position.x,10,this.camera.position.z);
 
         controls.enabled = false;
 
@@ -196,5 +199,26 @@ export default class Core {
 
         pane.refresh();
         return pane;
+    }
+
+    /* 🔃 Loading */
+    private initLoading(): THREE.LoadingManager {
+        const loading = new THREE.LoadingManager();
+        loading.onStart = (url, itemsLoaded, itemsTotal) => {
+            console.log('Started loading file: ' + url + '.\nLoaded ' + itemsLoaded + ' of ' + itemsTotal + ' files.');
+        };
+
+        loading.onLoad = () => {
+            console.log('Loading complete!');
+        };
+
+        loading.onProgress = (url, itemsLoaded, itemsTotal) => {
+            console.log('Loading file: ' + url + '.\nLoaded ' + itemsLoaded + ' of ' + itemsTotal + ' files.');
+        };
+
+        loading.onError = (url) => {
+            console.log('There was an error loading ' + url);
+        };
+        return loading;
     }
 }
