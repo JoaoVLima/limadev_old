@@ -178,19 +178,19 @@ export default class Core {
     }
 
     /* 🎮 Controls */
-    private initControls(): OrbitControls {
-        const controls = new OrbitControls(this.camera, this.renderer.domElement);
-        controls.minDistance = 1;
-        controls.maxDistance = 100;
-        controls.maxZoom = 2;
-        // controls.maxPolarAngle = Math.PI / 2;
-        controls.target.set(this.camera.position.x,10,this.camera.position.z);
+    // private initControls(): OrbitControls {
+    //     const controls = new OrbitControls(this.camera, this.renderer.domElement);
+    //     controls.minDistance = 1;
+    //     controls.maxDistance = 100;
+    //     controls.maxZoom = 2;
+    //     // controls.maxPolarAngle = Math.PI / 2;
+    //     controls.target.set(this.camera.position.x,10,this.camera.position.z);
 
-        controls.enabled = false;
+    //     controls.enabled = false;
 
-        controls.update();
-        return controls;
-    }
+    //     controls.update();
+    //     return controls;
+    // }
 
     /* 📈 Pane */
     private initPane(): Pane {
