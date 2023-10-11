@@ -194,7 +194,12 @@ export default class Core {
 
     /* 📈 Pane */
     private initPane(): Pane {
-        const pane = new Pane();
+        const pane = new Pane({
+            title: 'Parameters',
+            expanded: true,
+        });
+
+
         pane.registerPlugin(EssentialsPlugin);
 
         pane.refresh();

@@ -29,5 +29,15 @@ function init() {
     }
     window.addEventListener('resize', onWindowResize, false);
 
+
+    document.body.addEventListener("mousemove", evt => {
+        let mouseX = evt.clientX;
+        let mouseY = evt.clientY;
+        
+        let d = document.getElementById('cursor') as HTMLCanvasElement;
+        d.style.position = "absolute";
+        d.style.left = mouseX+'px';
+        d.style.top = mouseY+'px';
+      })
 }
 init();

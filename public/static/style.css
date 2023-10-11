@@ -1,10 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Outfit&family=Parisienne&display=swap');
-/*font-family: 'Josefin Sans', sans-serif;*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/tamira');
+@import url('https://fonts.cdnfonts.com/css/megante-personal-use-only');
 /*font-family: 'Roboto', sans-serif;*/
 /*font-family: 'Roboto Mono', monospace;*/
-/*font-family: 'Outfit', sans-serif;*/
-/*font-family: 'Parisienne', cursive;*/
+/*font-family: 'Rubik', sans-serif;*/
+/*font-family: 'Tamira', sans-serif;*/
+/*font-family: 'Meganté-Personal-Use-Only', sans-serif;*/
+
 
 /* :root {
     --color-1: #a6445d;
@@ -22,6 +25,10 @@
     --umber: #5C483Eff;
 } */
 
+* {
+    box-sizing: border-box;
+    cursor: none;
+}
 
 @media (prefers-color-scheme: dark) {
     :root {
@@ -59,7 +66,6 @@
     }
 }
 
-
 :root {
     --color-primary: #0d6efd;
     --color-secondary: #6c757d;
@@ -71,16 +77,15 @@
     --color-warning: #ffc107;
     --color-danger: #dc3545;
 
-    --color-font-primary: #f8f9fa;
-    --color-font-secondary: #f8f9fa;
-    --color-font-tertiary: #f8f9fa;
+    --color-font-primary: #ffcccc;
+    --color-font-secondary: white;
+    --color-font-tertiary: white;
 
+    --color-bg: white;
 
-    --color-bg: #fff;
-
-    --font-primary: 'Josefin Sans', sans-serif;
-    --font-secondary: 'Roboto', sans-serif;
-    --font-tertiary: 'Parisienne', cursive;
+    --font-primary: 'Tamira', sans-serif;
+    --font-secondary: 'Meganté-Personal-Use-Only', sans-serif;
+    --font-tertiary: 'Rubik', sans-serif;
     --font-monospace: 'Roboto Mono', monospace;
 }
 
@@ -108,10 +113,6 @@
     --tp-monitor-foreground-color: hsla(0, 0%, 100%, 0.3);
 }
 
-* {
-    box-sizing: border-box;
-}
-
 body {
     background-color: var(--color-bg);
     background-attachment: fixed;
@@ -120,17 +121,8 @@ body {
 
     overflow: hidden;
 
-    font-family: var(--font-secondary);
+    font-family: var(--font-monospace);
     color: #272727;
-}
-
-main {
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-	overflow-y: scroll;
-	scroll-snap-type: y mandatory;
-    z-index: 0;
 }
 
 #ThreeCanvas {
@@ -143,153 +135,41 @@ main {
     z-index: -1;
 }
 
-main::-webkit-scrollbar {
-    display: none;
-}
-
-main {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-}
-
-section {
-    width: 100%;
-    height: 100vh;
-	scroll-snap-align: start;
-}
-
-.progress-bar {
-    position: fixed;
-    right: 2vw;
-    background-color: white;
-    height: 100vh;
-    width: 5px;
-}
-
-.progress-bar .progress {
-    position: fixed;
-    background-color: gray;
-    height: 0;
-    width: 5.8px;
-}
-
-.grid-container {
-    width: 100%;
-    height: 100vh;
-    display: grid;
-
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    grid-template-rows: minmax(0, 1fr);
-    grid-template-areas:
-        'left middle right'
-        'left middle right'
-        'left middle right';
-
-    pointer-events: none;
-}
-
-.grid-left{
-    grid-area: left;
-}
-
-.grid-middle{
-    grid-area: middle;
-}
-
-.grid-right{
-    grid-area: right;
-}
-
-
-.grid-item {
-    position: relative;
-    padding: 1rem;
-    z-index: 1;
-}
-
-.grid-item h1,
-.grid-item h2,
-.grid-item h3,
-.grid-item h4,
-.grid-item h5,
-.grid-item h6,
-.grid-item p,
-.grid-item img,
-.grid-item a,
-.grid-item i
-{
-    pointer-events: all;
-}
-
-.logo {
-    width: clamp(100px, 15vw, 250px);
-    filter: invert(1);
-}
-
-header ul {
-    width: clamp(100px, 15vw, 250px);
-    position: absolute;
-    bottom: 15vh;
-    left: 0;
-}
-
-footer ul {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-
-footer p {
-    font-size: clamp(0.1vw, 0.5vw, 2vw);
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-a:hover {
-    color: gray;
-}
-
 h1 {
-    font-family: var(--font-tertiary);
-    font-size: 8vw;
-    font-weight: normal;
-    text-align: center;
-    margin-top: 12vh;
-    color: #a28169;
-}
-
-section h1 {
     font-family: var(--font-primary);
-    font-size: 2.9vw;
+    color: var(--color-font-primary);
+    mix-blend-mode: luminosity;
+    font-size: 17vw;
     font-weight: normal;
+    text-shadow: 1px 1px 10px red;
+    /* -webkit-text-stroke: 1px rgba(0, 0, 0, 0.26); */
     text-align: center;
-    margin-top: 12vh;
 }
 
-section p {
-    font-size: 1vw;
-    text-align: justify;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 5;
-    -webkit-box-orient: vertical;
-
+p {
+    font-family: 'Rubik', sans-serif;
+    color: var(--color-font-secondary);
+    mix-blend-mode: luminosity;
+    font-weight: 400;
+    text-shadow: 1px 1px 1px red;
+    /* -webkit-text-stroke: 0.5px white; */
 }
 
-.wrapper-main p {
-    margin-top: 52vh;
-    padding-left: 5rem;
-    padding-right: 5rem;
-    line-height: 1.4rem;
-}
+.cursor {
+    position: fixed;
+    background: var(--color-font-primary);
+    mix-blend-mode: luminosity;
+    box-shadow: 1px 1px 10px red;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border-radius: 50%;
+    will-change: transform;
+    user-select: none;
+    pointer-events: none;
+    z-index: 10000;
+  }
 
-.wrapper-main .icons {
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
 
 /* 'sm' applies to x-small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
@@ -303,33 +183,6 @@ section p {
 
 /* 'lg' applies to medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {
-    .grid-container {
-        grid-template-columns: minmax(0, 1fr);
-        grid-template-rows: minmax(0, 0.1fr) minmax(0, 0.8fr) minmax(0, 0.1fr);
-        grid-template-areas:
-            'left left left'
-            'middle middle middle'
-            'right right right'
-    }
-
-    .grid-item {
-        width: 100vw;
-    }
-
-    footer,
-    .progress-bar,
-    .progress,
-    header > ul {
-        display: none;
-    }
-
-    section h1 {
-        margin-top: 0vh;
-    }
-
-    .wrapper-main p {
-        margin-top: 45vh;
-    }
 
 }
 
