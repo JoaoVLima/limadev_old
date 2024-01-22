@@ -21,6 +21,7 @@ lib-cov
 
 # Coverage directory used by tools like istanbul
 coverage
+/coverage
 *.lcov
 
 # nyc test coverage
@@ -40,13 +41,16 @@ build/Release
 
 # Dependency directories
 node_modules/
+/node_modules
 jspm_packages/
+/jspm_packages
 
 # TypeScript v1 declaration files
 typings/
 
 # TypeScript cache
 *.tsbuildinfo
+next-env.d.ts
 
 # Optional npm cache directory
 .npm
@@ -78,6 +82,8 @@ typings/
 
 # Next.js build output
 .next
+/.next/
+/out/
 
 # Nuxt.js build / generate output
 .nuxt
@@ -111,3 +117,23 @@ dist/
 
 # npm
 package-lock.json
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# local env files
+.env*.local
+
+# vercel
+.vercel
