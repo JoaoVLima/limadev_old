@@ -6,6 +6,32 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --a: #D04848;
+  --b: #BA4F37;
+  --c: #C9893F;
+  --d: #F3B95F;
+  --e: #FDE767;
+  --f: #B6C848;
+  --g: #96BA2F;
+  --h: #71A944;
+  --i: #4C8730;
+  --j: #6FA55D;
+  --k: #448E50;
+  --l: #2DAC7E;
+  --m: #19B8AE;
+  --n: #52BCD3;
+  --o: #317BBF;
+  --p: #3150BF;
+  --q: #3B43F1;
+  --r: #5F45A9;
+  --s: #8F45A9;
+  --t: #A431B7;
+  --u: #BE4896;
+  --v: #E24171;
+  --w: #D03535;
+  --x: #353535;
+  --y: #000000;
+  --z: #FFFFFF;
 }
 
 @media (prefers-color-scheme: dark) {
