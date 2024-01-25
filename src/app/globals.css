@@ -30,8 +30,10 @@
   --v: #E24171;
   --w: #D03535;
   --x: #353535;
-  --y: #000000;
-  --z: #FFFFFF;
+  --y: #ABABAB;
+
+  /* --black: #000000; */
+  /* --white: #FFFFFF; */
 }
 
 @media (prefers-color-scheme: dark) {
