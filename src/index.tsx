@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import './style.css'
-import { Slider } from './components/slider';
+import { Swiper } from './components/swiper.tsx';
 
 function init() {
     const root = document.getElementById('root') as HTMLDivElement;
-    ReactDOM.render(<Slider/>, root);
+    ReactDOM.render(<Swiper/>, root);
 }
 init();
