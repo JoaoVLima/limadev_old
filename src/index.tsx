@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import './style.css'
-import { Swiper } from './components/swiper.tsx';
+import { App } from './app.tsx';
 
 function init() {
-    const root = document.getElementById('root') as HTMLDivElement;
-    ReactDOM.render(<Swiper/>, root);
+    const app = document.getElementById('app') as HTMLDivElement;
+    ReactDOM.render(<App/>, app);
 }
 init();
