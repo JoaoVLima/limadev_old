@@ -3,8 +3,6 @@ import React from 'react';
 import {Swiper, SwiperSlide} from 'swiper/react';
 
 import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
 
 
 import {Keyboard, Mousewheel, HashNavigation} from 'swiper/modules';
@@ -33,53 +31,13 @@ export function Hero() {
                     modules={[Keyboard, Mousewheel, HashNavigation]}
                 >
                     <SwiperSlide className="rounded-3xl bg-neutral-900 text-center text-white" data-hash="Brenda">
-                        <Swiper
-                            className="h-full w-full"
-                            direction={'vertical'}
-                            slidesPerView={"auto"}
-                            centeredSlides={true}
-                            spaceBetween={30}
-                            keyboard={true}
-                            grabCursor={true}
-                            mousewheel={{
-                                forceToAxis: true,
-                            }}
-                            navigation={false}
-                            modules={[Keyboard, Mousewheel]}
-                        >
-                            <SwiperSlide className="rounded-3xl text-center text-white">
-                                <h1>Brenda</h1>
-                            </SwiperSlide>
-                            <SwiperSlide className="rounded-3xl text-center text-white">
-                                <h1>Portifolio</h1>
-                            </SwiperSlide>
-                        </Swiper>
+                        <h1>Brenda</h1>
                     </SwiperSlide>
                     <SwiperSlide className="!w-1" data-hash=" ">
                         {/* Middle */}
                     </SwiperSlide>
                     <SwiperSlide className="rounded-3xl bg-neutral-900 text-center text-white" data-hash="Joao">
-                        <Swiper
-                            className="h-full w-full"
-                            direction={'vertical'}
-                            slidesPerView={"auto"}
-                            centeredSlides={true}
-                            spaceBetween={30}
-                            keyboard={true}
-                            grabCursor={true}
-                            mousewheel={{
-                                forceToAxis: true,
-                            }}
-                            navigation={false}
-                            modules={[Keyboard, Mousewheel]}
-                        >
-                            <SwiperSlide className="rounded-3xl text-center text-white">
-                                <h1>Joao</h1>
-                            </SwiperSlide>
-                            <SwiperSlide className="rounded-3xl text-center text-white">
-                                <h1>Portifolio</h1>
-                            </SwiperSlide>
-                        </Swiper>
+                        <h1>Joao</h1>
                     </SwiperSlide>
                 </Swiper>
             </div>
