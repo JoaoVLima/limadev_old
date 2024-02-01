@@ -1,0 +1,39 @@
+.path {
+    animation: 2s ease 0s infinite normal none running swipe-dot;
+}
+
+.hand-icon {
+    animation: 2s ease 0s infinite normal none running swipe-hand;
+}
+
+@keyframes swipe-hand {
+    25% {
+        transform: translateX(-2.75rem) rotate(-15deg);
+    }
+    50% {
+        transform: translateX(2.75rem) rotate(30deg);
+    }
+    /*75% {*/
+    /*    transform: translateX(-2.75rem) rotate(-30deg);*/
+    /*}*/
+    100% {
+        transform: translateX(0px) rotate(0);
+    }
+}
+
+@keyframes swipe-dot {
+    0%{
+         transform: translate(3.2rem, 1.3rem)
+    }
+    10% {
+
+    }
+    25% {
+
+    }
+    26% {
+    }
+    100%{
+         transform: translate(3.2rem, 1.3rem)
+    }
+}

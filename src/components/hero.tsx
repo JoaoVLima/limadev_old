@@ -1,17 +1,15 @@
 import React from 'react';
 
 import {Swiper, SwiperSlide} from 'swiper/react';
-
-import 'swiper/css';
-
-
 import {Keyboard, Mousewheel, HashNavigation} from 'swiper/modules';
-
+import 'swiper/css';
+import {SwipeHand} from "./swipehand.tsx";
 
 export function Hero() {
     return (
         <>
-            <div className="h-svh min-h-96 pt-28 pb-10 px-2">
+            <SwipeHand/>
+            <div className="px-1 pt-28 pb-10 h-svh min-h-96 lg:px-2">
                 <Swiper
                     className="h-full w-full"
                     slidesPerView={"auto"}
@@ -25,7 +23,7 @@ export function Hero() {
                     keyboard={true}
                     grabCursor={true}
                     mousewheel={{
-                        forceToAxis: true,
+                        forceToAxis: false,
                     }}
                     navigation={false}
                     modules={[Keyboard, Mousewheel, HashNavigation]}
