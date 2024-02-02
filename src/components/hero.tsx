@@ -8,13 +8,12 @@ import {SwipeHand, HideHand} from "./swipehand.tsx";
 export function Hero() {
     return (
         <>
-            {!window.location.hash && <SwipeHand />}
-            <div className="px-1 pt-28 pb-10 h-svh min-h-96 lg:px-2">
+            {!window.location.hash && <SwipeHand/>}
+            <div className="px-1 pt-28 pb-10 h-screen min-h-96 lg:px-2">
                 <Swiper
                     className="h-full w-full"
                     slidesPerView={"auto"}
                     centeredSlides={true}
-                    spaceBetween={30}
                     initialSlide={1}
                     hashNavigation={{
                         watchState: true,
@@ -34,7 +33,7 @@ export function Hero() {
                     <SwiperSlide className="rounded-3xl bg-neutral-900 text-center text-white" data-hash="Brenda">
                         <h1>Brenda</h1>
                     </SwiperSlide>
-                    <SwiperSlide className="!w-1" data-hash=" ">
+                    <SwiperSlide className="!w-12" data-hash=" ">
                         {/* Middle */}
                     </SwiperSlide>
                     <SwiperSlide className="rounded-3xl bg-neutral-900 text-center text-white" data-hash="Joao">
