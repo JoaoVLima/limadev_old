@@ -1,5 +1,10 @@
-.path {
+
+.dot-icon {
     animation: 2s ease 0s infinite normal none running swipe-dot;
+}
+
+.path {
+    animation: 2s ease 0s infinite normal none running swipe-path;
 }
 
 .hand-icon {
@@ -7,33 +12,117 @@
 }
 
 @keyframes swipe-hand {
+    0% {
+        transform: translate(0px) rotate(0);
+    }
     25% {
-        transform: translateX(-2.75rem) rotate(-15deg);
+        transform: translate(-1rem) rotate(-20deg);
     }
     50% {
-        transform: translateX(2.75rem) rotate(30deg);
+        transform: translate(1rem) rotate(30deg);
     }
-    /*75% {*/
-    /*    transform: translateX(-2.75rem) rotate(-30deg);*/
-    /*}*/
+    75% {
+        transform: translate(-1rem) rotate(-30deg);
+    }
     100% {
-        transform: translateX(0px) rotate(0);
+        transform: translate(0px) rotate(0);
     }
 }
 
 @keyframes swipe-dot {
-    0%{
-         transform: translate(3.2rem, 1.3rem)
-    }
-    10% {
-
+    0% {
+        transform: translate(0px) rotate(0);
+        visibility: hidden;
     }
     25% {
-
+        transform: translate(-2.4rem);
+        visibility: hidden;
     }
     26% {
+        visibility: visible;
     }
-    100%{
-         transform: translate(3.2rem, 1.3rem)
+    50% {
+        transform: translate(3rem);
+        visibility: visible;
+    }
+    75% {
+        transform: translate(-3rem);
+        visibility: visible;
+    }
+    76% {
+       visibility: hidden;
+      }
+    100% {
+        transform: translate(0px);
+        visibility: hidden;
     }
 }
+
+
+@keyframes swipe-path {
+    0% {
+        transform: translate(0px) rotate(0);
+        visibility: hidden;
+        background-image: linear-gradient(to left, #c026d3, rgba(0,0,0,0) 90%);
+        width: 1.75rem;
+        right: 0.5rem
+    }
+    25% {
+        transform: translate(-2.4rem);
+        visibility: hidden;
+        background-image: linear-gradient(to left, #c026d3, rgba(0,0,0,0) 90%);
+        width: 1.75rem;
+        right: 0.5rem
+    }
+    26% {
+        visibility: visible;
+        background-image: linear-gradient(to left, #c026d3, rgba(0,0,0,0) 90%);
+    }
+    40%{
+        width: 5rem;
+        right: 2rem;
+    }
+    49%{
+        background-image: linear-gradient(to left, #c026d3, rgba(0,0,0,0) 90%);
+    }
+    50% {
+        transform: translate(3rem);
+        visibility: visible;
+        background-image: linear-gradient(to right, #c026d3, rgba(0,0,0,0) 90%);
+        right: 0.5rem;
+        width: 1.75rem;
+    }
+    58%{
+        width: 5rem;
+        right: -1rem;
+    }
+    75% {
+        transform: translate(-3rem);
+        visibility: visible;
+        background-image: linear-gradient(to right, #c026d3, rgba(0,0,0,0) 90%);
+        width: 1.75rem;
+    }
+    76% {
+       visibility: hidden;
+        right: 0.5rem
+      }
+    100% {
+        transform: translate(0px);
+        visibility: hidden;
+        width: 1.75rem;
+        right: 0.5rem
+    }
+}
+
+.hidehand {
+    animation: hideMe 0.5s forwards;
+}
+
+@keyframes hideMe{
+        0%{
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+        }
+    }
