@@ -4,6 +4,7 @@ import {Swiper, SwiperSlide} from 'swiper/react';
 import {Keyboard, Mousewheel, HashNavigation} from 'swiper/modules';
 import 'swiper/css';
 import {SwipeHand, HideHand} from "./swipehand.tsx";
+import {Cards, SpreadCards} from "./cards.tsx"
 
 export function Hero() {
     return (
@@ -29,15 +30,19 @@ export function Hero() {
                     onClick={HideHand}
                     onDrag={HideHand}
                     onTouchStart={HideHand}
+                    onSlideChange={SpreadCards}
+                    onSliderMove={SpreadCards}
+                    onSliderFirstMove={SpreadCards}
+                    onHashSet={SpreadCards}
                 >
-                    <SwiperSlide className="rounded-3xl bg-neutral-900 text-center text-white" data-hash="Brenda">
-                        <h1>Brenda</h1>
+                    <SwiperSlide className="rounded-3xl bg-neutral-900/70 text-center text-white" data-hash="Brenda">
+                        <Cards id="Brenda" />
                     </SwiperSlide>
                     <SwiperSlide className="!w-12" data-hash=" ">
                         {/* Middle */}
                     </SwiperSlide>
-                    <SwiperSlide className="rounded-3xl bg-neutral-900 text-center text-white" data-hash="Joao">
-                        <h1>Joao</h1>
+                    <SwiperSlide className="rounded-3xl bg-neutral-900/70 text-center text-white" data-hash="Joao">
+                        <Cards id="Joao" />
                     </SwiperSlide>
                 </Swiper>
             </div>
