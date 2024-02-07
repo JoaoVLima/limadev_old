@@ -12,19 +12,30 @@ export function Cards({id}: { id: string }) {
             "bigcards": [
                 {
                     "color": "ring-amber-700 bg-amber-700",
-                    "translate": "translate-x-0 rotate-0 group-[.spreadcards]/cards:rotate-90",
+                    "translate": `translate-x-0 rotate-0 
+                        group-[.spreadcards]/cards:rotate-12 
+                        group-[.spreadcards]/cards:-translate-y-16`,
                     "z_index": "z-40"
                 }, {
                     "color": "ring-amber-300 bg-amber-300",
-                    "translate": "translate-x-2 -rotate-6",
+                    "translate": `translate-x-2 -rotate-6 
+                        group-[.spreadcards]/cards:rotate-0 
+                        group-[.spreadcards]/cards:-translate-x-36 
+                        group-[.spreadcards]/cards:-translate-y-20`,
                     "z_index": "z-30"
                 }, {
                     "color": "ring-lime-700 bg-lime-700",
-                    "translate": "-translate-x-3 rotate-6",
+                    "translate": `-translate-x-3 rotate-6 
+                        group-[.spreadcards]/cards:-rotate-12
+                        group-[.spreadcards]/cards:-translate-x-[19rem] 
+                        group-[.spreadcards]/cards:-translate-y-16`,
                     "z_index": "z-20"
                 }, {
                     "color": "ring-blue-700 bg-blue-700",
-                    "translate": "-translate-x-2 rotate-6",
+                    "translate": `-translate-x-2 rotate-6
+                        group-[.spreadcards]/cards:-rotate-[25deg]
+                        group-[.spreadcards]/cards:-translate-x-[28rem]
+                        group-[.spreadcards]/cards:-translate-y-5`,
                     "z_index": "z-10"
                 }
             ],
@@ -62,20 +73,31 @@ export function Cards({id}: { id: string }) {
         "Joao": {
             "bigcards": [
                 {
-                    "color": "ring-amber-700 bg-amber-700",
-                    "translate": "translate-x-0 rotate-0",
+                    "color": "ring-red-600 bg-red-600",
+                    "translate": `translate-x-0 rotate-0 
+                        group-[.spreadcards]/cards:-rotate-12 
+                        group-[.spreadcards]/cards:-translate-y-16`,
                     "z_index": "z-40"
                 }, {
                     "color": "ring-amber-300 bg-amber-300",
-                    "translate": "translate-x-2 -rotate-6",
+                    "translate": `translate-x-2 -rotate-6 
+                        group-[.spreadcards]/cards:-rotate-0 
+                        group-[.spreadcards]/cards:translate-x-36 
+                        group-[.spreadcards]/cards:-translate-y-20`,
                     "z_index": "z-30"
                 }, {
                     "color": "ring-lime-700 bg-lime-700",
-                    "translate": "-translate-x-3 rotate-6",
+                    "translate": `-translate-x-3 rotate-6 
+                        group-[.spreadcards]/cards:rotate-12
+                        group-[.spreadcards]/cards:translate-x-[19rem] 
+                        group-[.spreadcards]/cards:-translate-y-16`,
                     "z_index": "z-20"
                 }, {
                     "color": "ring-blue-700 bg-blue-700",
-                    "translate": "-translate-x-2 rotate-6",
+                    "translate": `-translate-x-2 rotate-6
+                        group-[.spreadcards]/cards:rotate-[25deg]
+                        group-[.spreadcards]/cards:translate-x-[28rem]
+                        group-[.spreadcards]/cards:-translate-y-5`,
                     "z_index": "z-10"
                 }
             ],

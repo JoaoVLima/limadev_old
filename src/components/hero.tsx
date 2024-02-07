@@ -34,7 +34,7 @@ export function Hero() {
                     onHashSet={SpreadCards}
                     onSlideChangeTransitionStart={SpreadCards}
                     onSlideChangeTransitionEnd={SpreadCards}
-                    onProgress={(swiper, progress) => {console.log(progress)}}
+                    // onProgress={(swiper, progress) => {console.log(progress)}}
                 >
                     <SwiperSlide className="rounded-3xl bg-neutral-900/70 text-center text-white" data-hash="Brenda">
                         <Cards id="Brenda"/>
