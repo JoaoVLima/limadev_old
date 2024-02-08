@@ -16,6 +16,7 @@ export function Hero() {
                     slidesPerView={"auto"}
                     centeredSlides={true}
                     initialSlide={1}
+
                     hashNavigation={{
                         watchState: true,
                         replaceState: true,
