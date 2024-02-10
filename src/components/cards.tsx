@@ -15,7 +15,9 @@ export function Cards({id}: { id: string }) {
             "cards": [
                 {
                     "size": "w-48 lg:w-80",
-                    "color": "ring-amber-700 bg-[url(/img/brenda_img1.jpg)] bg-amber-700",
+                    "color": `ring-amber-700 
+                        bg-[image:linear-gradient(to_bottom,theme(colors.amber.700/20%),theme(colors.amber.700/20%)),url(/img/brenda_img1.jpg)]
+                        bg-amber-700`,
                     "translate": `translate-x-0 rotate-0
                         group-[.spreadcards]/cards:rotate-6
                         group-[.spreadcards]/cards:-translate-x-6
@@ -23,7 +25,9 @@ export function Cards({id}: { id: string }) {
                     "z_index": "z-[70]"
                 }, {
                     "size": "w-48 lg:w-80",
-                    "color": "ring-amber-300 bg-amber-300",
+                    "color": `ring-amber-300 
+                    bg-[image:linear-gradient(to_bottom,theme(colors.amber.300/20%),theme(colors.amber.300/20%)),url(/img/brenda_img2.jpg)]
+                    bg-amber-300`,
                     "translate": `translate-x-2 -rotate-6 
                         group-[.spreadcards]/cards:rotate-0
                         group-[.spreadcards]/cards:-translate-x-72
@@ -31,7 +35,9 @@ export function Cards({id}: { id: string }) {
                     "z_index": "z-50"
                 }, {
                     "size": "w-48 lg:w-80",
-                    "color": "ring-lime-700 bg-lime-700",
+                    "color": `ring-lime-700 
+                    bg-[image:linear-gradient(to_bottom,theme(colors.lime.700/20%),theme(colors.lime.700/20%)),url(/img/brenda_img3.jpg)]
+                    bg-lime-700`,
                     "translate": `-translate-x-3 rotate-6 
                         group-[.spreadcards]/cards:-rotate-12
                         group-[.spreadcards]/cards:-translate-x-[31rem] 
@@ -39,7 +45,9 @@ export function Cards({id}: { id: string }) {
                     "z_index": "z-30"
                 }, {
                     "size": "w-48 lg:w-80",
-                    "color": "ring-blue-700 bg-blue-700",
+                    "color": `ring-blue-700
+                     bg-[image:linear-gradient(to_bottom,theme(colors.blue.700/20%),theme(colors.blue.700/20%)),url(/img/brenda_img4.jpg)]
+                     bg-blue-700`,
                     "translate": `-translate-x-2 rotate-6
                         group-[.spreadcards]/cards:-rotate-[21deg]
                         group-[.spreadcards]/cards:-translate-x-[46rem]
@@ -48,7 +56,9 @@ export function Cards({id}: { id: string }) {
                 },
                 {
                     "size": "w-28 lg:w-28",
-                    "color": "ring-amber-700 bg-amber-700",
+                    "color": `ring-amber-700
+                     bg-[image:linear-gradient(to_bottom,theme(colors.amber.700/20%),theme(colors.amber.700/20%)),url(/img/brenda_img5.jpg)]
+                     bg-amber-700`,
                     "translate": `translate-x-0 rotate-0 
                         group-[.spreadcards]/cards:rotate-12 
                         group-[.spreadcards]/cards:-translate-x-[58rem]
@@ -56,7 +66,9 @@ export function Cards({id}: { id: string }) {
                     "z_index": "z-20"
                 }, {
                     "size": "w-28 lg:w-28",
-                    "color": "ring-amber-300 bg-amber-300",
+                    "color": `ring-amber-300
+                     bg-[image:linear-gradient(to_bottom,theme(colors.amber.300/20%),theme(colors.amber.300/20%)),url(/img/brenda_img6.jpg)]
+                     bg-amber-300`,
                     "translate": `translate-x-2 -rotate-6 
                         group-[.spreadcards]/cards:-rotate-45
                         group-[.spreadcards]/cards:-translate-x-96 
@@ -64,7 +76,9 @@ export function Cards({id}: { id: string }) {
                     "z_index": "z-40"
                 }, {
                     "size": "w-28 lg:w-28",
-                    "color": "ring-lime-700 bg-lime-700",
+                    "color": `ring-lime-700
+                     bg-[image:linear-gradient(to_bottom,theme(colors.lime.700/20%),theme(colors.lime.700/20%)),url(/img/brenda_img7.jpg)]
+                     bg-lime-700`,
                     "translate": `-translate-x-3 rotate-6 
                         group-[.spreadcards]/cards:rotate-[30deg]
                         group-[.spreadcards]/cards:translate-x-28 
@@ -92,7 +106,9 @@ export function Cards({id}: { id: string }) {
             "cards": [
                 {
                     "size": "w-48 lg:w-80",
-                    "color": "ring-red-600 bg-red-600",
+                    "color": `ring-red-600
+                     bg-[image:linear-gradient(to_bottom,theme(colors.red.600/20%),theme(colors.red.600/20%)),url(/img/joao_img1.jpg)]
+                     bg-red-600`,
                     "translate": `translate-x-0 rotate-0 
                         group-[.spreadcards]/cards:-rotate-6
                         group-[.spreadcards]/cards:translate-x-6
@@ -100,7 +116,9 @@ export function Cards({id}: { id: string }) {
                     "z_index": "z-[70]"
                 }, {
                     "size": "w-48 lg:w-80",
-                    "color": "ring-amber-300 bg-amber-300",
+                    "color": `ring-amber-300
+                     bg-[image:linear-gradient(to_bottom,theme(colors.amber.300/20%),theme(colors.amber.300/20%)),url(/img/joao_img2.jpg)]
+                     bg-amber-300`,
                     "translate": `translate-x-2 -rotate-6 
                         group-[.spreadcards]/cards:rotate-0
                         group-[.spreadcards]/cards:translate-x-72
@@ -108,7 +126,9 @@ export function Cards({id}: { id: string }) {
                     "z_index": "z-50"
                 }, {
                     "size": "w-48 lg:w-80",
-                    "color": "ring-lime-700 bg-lime-700",
+                    "color": `ring-lime-700
+                     bg-[image:linear-gradient(to_bottom,theme(colors.lime.700/20%),theme(colors.lime.700/20%)),url(/img/joao_img3.jpg)]
+                     bg-lime-700`,
                     "translate": `-translate-x-3 rotate-6 
                         group-[.spreadcards]/cards:rotate-12
                         group-[.spreadcards]/cards:translate-x-[31rem] 
@@ -116,7 +136,9 @@ export function Cards({id}: { id: string }) {
                     "z_index": "z-30"
                 }, {
                     "size": "w-48 lg:w-80",
-                    "color": "ring-blue-700 bg-blue-700",
+                    "color": `ring-blue-700
+                     bg-[image:linear-gradient(to_bottom,theme(colors.blue.700/20%),theme(colors.blue.700/20%)),url(/img/joao_img4.jpg)]
+                     bg-blue-700`,
                     "translate": `-translate-x-3 rotate-3
                         group-[.spreadcards]/cards:rotate-[21deg]
                         group-[.spreadcards]/cards:translate-x-[46rem]
@@ -125,7 +147,9 @@ export function Cards({id}: { id: string }) {
                 },
                 {
                     "size": "w-28 lg:w-28",
-                    "color": "ring-red-600 bg-red-600",
+                    "color": `ring-red-600
+                     bg-[image:linear-gradient(to_bottom,theme(colors.red.600/20%),theme(colors.red.600/20%)),url(/img/joao_img5.jpg)]
+                     bg-red-600`,
                     "translate": `translate-x-0 rotate-0 
                         group-[.spreadcards]/cards:-rotate-12 
                         group-[.spreadcards]/cards:translate-x-[70rem]
@@ -133,7 +157,9 @@ export function Cards({id}: { id: string }) {
                     "z_index": "z-20"
                 }, {
                     "size": "w-28 lg:w-28",
-                    "color": "ring-amber-300 bg-amber-300",
+                    "color": `ring-amber-300
+                     bg-[image:linear-gradient(to_bottom,theme(colors.amber.300/20%),theme(colors.amber.300/20%)),url(/img/joao_img6.jpg)]
+                     bg-amber-300`,
                     "translate": `translate-x-2 -rotate-6 
                         group-[.spreadcards]/cards:rotate-45
                         group-[.spreadcards]/cards:translate-x-[37rem] 
@@ -141,7 +167,9 @@ export function Cards({id}: { id: string }) {
                     "z_index": "z-40"
                 }, {
                     "size": "w-28 lg:w-28",
-                    "color": "ring-lime-700 bg-lime-700",
+                    "color": `ring-lime-700
+                     bg-[image:linear-gradient(to_bottom,theme(colors.lime.700/20%),theme(colors.lime.700/20%)),url(/img/joao_img7.jpg)]
+                     bg-lime-700`,
                     "translate": `-translate-x-3 rotate-6 
                         group-[.spreadcards]/cards:-rotate-[30deg]
                         group-[.spreadcards]/cards:translate-x-20 
