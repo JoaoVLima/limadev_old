@@ -1,6 +1,6 @@
 import React from "react";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faInstagram} from '@fortawesome/free-brands-svg-icons'
 
 export function Cards({id}: { id: string }) {
@@ -16,7 +16,7 @@ export function Cards({id}: { id: string }) {
                 {
                     "size": "w-48 lg:w-80",
                     "color": `ring-amber-700 
-                        bg-[image:linear-gradient(to_bottom,theme(colors.amber.700/20%),theme(colors.amber.700/20%)),url(/img/brenda_img1.jpg)]
+                        bg-[image:linear-gradient(to_bottom,theme(colors.amber.700/10%),theme(colors.amber.700/10%)),url(/img/brenda_img1.jpg)]
                         bg-amber-700`,
                     "translate": `translate-x-0 rotate-0
                         group-[.spreadcards]/cards:rotate-6
@@ -66,13 +66,13 @@ export function Cards({id}: { id: string }) {
                     "z_index": "z-20"
                 }, {
                     "size": "w-28 lg:w-28",
-                    "color": `ring-amber-300
-                     bg-[image:linear-gradient(to_bottom,theme(colors.amber.300/20%),theme(colors.amber.300/20%)),url(/img/brenda_img6.jpg)]
-                     bg-amber-300`,
+                    "color": `ring-amber-400
+                     bg-[image:linear-gradient(to_bottom,theme(colors.amber.400/20%),theme(colors.amber.400/20%)),url(/img/brenda_img6.jpg)]
+                     bg-amber-400`,
                     "translate": `translate-x-2 -rotate-6 
                         group-[.spreadcards]/cards:-rotate-45
-                        group-[.spreadcards]/cards:-translate-x-96 
-                        group-[.spreadcards]/cards:translate-y-[30rem]`,
+                        group-[.spreadcards]/cards:-translate-x-60 
+                        group-[.spreadcards]/cards:translate-y-[25rem]`,
                     "z_index": "z-40"
                 }, {
                     "size": "w-28 lg:w-28",
@@ -88,18 +88,32 @@ export function Cards({id}: { id: string }) {
             ],
             "texts": [
                 {
-                    "text": "",
-                    "a_link": "translate-x-2 -rotate-6",
-                    "z_index": "z-30"
-                }, {
-                    "color": "ring-lime-700 bg-lime-700",
-                    "translate": "-translate-x-3 rotate-6",
+                    "text": "\n Singer",
+                    "size": "text-6xl text-left inline-block align-text-bottom whitespace-pre-line",
+                    "translate": `absolute -translate-x-40 -translate-y-10 -rotate-[70deg]
+                        group-[.spreadcards]/cards:rotate-0
+                        group-[.spreadcards]/cards:-translate-x-[60rem]
+                        group-[.spreadcards]/cards:translate-y-[33rem]`,
                     "z_index": "z-20"
-                }, {
-                    "color": "ring-blue-700 bg-blue-700",
-                    "translate": "-translate-x-2 rotate-6",
-                    "z_index": "z-10"
-                }
+                },
+                {
+                    "text": "\n Influencer",
+                    "size": "text-6xl text-left inline-block align-text-bottom whitespace-pre-line",
+                    "translate": `absolute -translate-x-28 translate-y-[25rem] rotate-[16deg]
+                        group-[.spreadcards]/cards:rotate-0
+                        group-[.spreadcards]/cards:-translate-x-[36rem]
+                        group-[.spreadcards]/cards:translate-y-[33rem]`,
+                    "z_index": "z-40"
+                },
+                {
+                    "text": "Event \n Organizer",
+                    "size": "text-6xl text-left inline-block align-text-baseline whitespace-pre-line",
+                    "translate": `absolute -translate-x-2 translate-y-20 -rotate-[85deg]
+                        group-[.spreadcards]/cards:rotate-0
+                        group-[.spreadcards]/cards:-translate-x-40
+                        group-[.spreadcards]/cards:translate-y-[33rem]`,
+                    "z_index": "z-[60]"
+                },
             ],
         },
         "Joao": {
@@ -107,18 +121,18 @@ export function Cards({id}: { id: string }) {
                 {
                     "size": "w-48 lg:w-80",
                     "color": `ring-red-600
-                     bg-[image:linear-gradient(to_bottom,theme(colors.red.600/20%),theme(colors.red.600/20%)),url(/img/joao_img1.jpg)]
+                     bg-[image:linear-gradient(to_bottom,theme(colors.red.600/10%),theme(colors.red.600/10%)),url(/img/joao_img1.jpg)]
                      bg-red-600`,
-                    "translate": `translate-x-0 rotate-0 
+                    "translate": `translate-x-0 rotate-0
                         group-[.spreadcards]/cards:-rotate-6
                         group-[.spreadcards]/cards:translate-x-6
                         group-[.spreadcards]/cards:-translate-y-28`,
                     "z_index": "z-[70]"
                 }, {
                     "size": "w-48 lg:w-80",
-                    "color": `ring-amber-300
-                     bg-[image:linear-gradient(to_bottom,theme(colors.amber.300/20%),theme(colors.amber.300/20%)),url(/img/joao_img2.jpg)]
-                     bg-amber-300`,
+                    "color": `ring-amber-400
+                     bg-[image:linear-gradient(to_bottom,theme(colors.amber.400/20%),theme(colors.amber.400/20%)),url(/img/joao_img2.jpg)]
+                     bg-amber-400`,
                     "translate": `translate-x-2 -rotate-6 
                         group-[.spreadcards]/cards:rotate-0
                         group-[.spreadcards]/cards:translate-x-72
@@ -162,8 +176,8 @@ export function Cards({id}: { id: string }) {
                      bg-amber-300`,
                     "translate": `translate-x-2 -rotate-6 
                         group-[.spreadcards]/cards:rotate-45
-                        group-[.spreadcards]/cards:translate-x-[37rem] 
-                        group-[.spreadcards]/cards:translate-y-[30rem]`,
+                        group-[.spreadcards]/cards:translate-x-[28rem] 
+                        group-[.spreadcards]/cards:translate-y-[25rem]`,
                     "z_index": "z-40"
                 }, {
                     "size": "w-28 lg:w-28",
@@ -171,68 +185,76 @@ export function Cards({id}: { id: string }) {
                      bg-[image:linear-gradient(to_bottom,theme(colors.lime.700/20%),theme(colors.lime.700/20%)),url(/img/joao_img7.jpg)]
                      bg-lime-700`,
                     "translate": `-translate-x-3 rotate-6 
-                        group-[.spreadcards]/cards:-rotate-[30deg]
-                        group-[.spreadcards]/cards:translate-x-20 
-                        group-[.spreadcards]/cards:translate-y-[28rem]`,
+                        group-[.spreadcards]/cards:-rotate-[57deg]
+                        group-[.spreadcards]/cards:translate-x-40 
+                        group-[.spreadcards]/cards:translate-y-[25rem]`,
                     "z_index": "z-[60]"
                 }
             ],
             "texts": [
                 {
-                    "text": "ring-lime-700 bg-lime-700",
-                    "a_link": "translate-x-2 -rotate-6",
-                    "z_index": "z-30"
-                }, {
-                    "color": "ring-lime-700 bg-lime-700",
-                    "translate": "-translate-x-3 rotate-6",
+                    "text": "\n BeatMaker",
+                    "size": "text-6xl text-left inline-block align-text-bottom whitespace-pre-line",
+                    "translate": `absolute -translate-x-40 -rotate-[70deg]
+                        group-[.spreadcards]/cards:rotate-0
+                        group-[.spreadcards]/cards:translate-x-[45rem]
+                        group-[.spreadcards]/cards:translate-y-[33rem]`,
                     "z_index": "z-20"
-                }, {
-                    "color": "ring-blue-700 bg-blue-700",
-                    "translate": "-translate-x-2 rotate-6",
-                    "z_index": "z-10"
-                }
+                },
+                {
+                    "text": "\n Programmer",
+                    "size": "text-6xl text-left inline-block align-text-bottom whitespace-pre-line",
+                    "translate": `absolute -translate-x-48 translate-y-[25rem] rotate-6
+                        group-[.spreadcards]/cards:rotate-0
+                        group-[.spreadcards]/cards:translate-x-64
+                        group-[.spreadcards]/cards:translate-y-[33rem]`,
+                    "z_index": "z-40"
+                },
+                {
+                    "text": "\n Drummer",
+                    "size": "text-6xl text-left inline-block align-text-baseline whitespace-pre-line",
+                    "translate": `absolute -translate-x-[21rem] translate-y-20 -rotate-[85deg]
+                        group-[.spreadcards]/cards:rotate-0
+                        group-[.spreadcards]/cards:-translate-x-40
+                        group-[.spreadcards]/cards:translate-y-[33rem]`,
+                    "z_index": "z-[60]"
+                },
             ],
         },
     };
     return (
-            <div className="grid h-full w-full grid-cols-6 place-items-center justify-items-center">
-                {id=="Joao" && <Name id={id} className="col-start-1 col-end-3"/>}
-                <div className={`${id=="Brenda" ? "col-start-4 col-end-4" : "col-start-3 col-end-3"} w-48 transition duration-500 ease-in-out group/cards aspect-[5/8] mb-20 lg:w-80`} id={id}>
-                    {user_settings[id].cards.map((item, index) => (
-                        <Card
-                            key={index}
-                            className={`${item.size} ring-8 ${item.color} 
-                            transition ease-in-out duration-500
-                            origin-bottom ${item.translate} ${item.z_index}`}
-                        />
-                    ))}
-                    {user_settings[id].texts.map((item, index) => (
-                        <Card
-                            key={index}
-                            className={`${item.size} ring-8 ${item.color} 
-                            transition ease-in-out duration-500
-                            origin-bottom ${item.translate} ${item.z_index}`}
-                        />
-                    ))}
-                </div>
-                {id=="Brenda" && <Name id={id} className="col-start-5 col-end-7"/>}
+        <div className="grid h-full w-full grid-cols-6 place-items-center justify-items-center">
+            {id == "Joao" && <Name id={id} className="col-start-1 col-end-3"/>}
+            <div className={`${id == "Brenda" ? "col-start-4 col-end-4" : "col-start-3 col-end-3"} w-48 transition duration-500 ease-in-out group/cards aspect-[5/8] mb-20 lg:w-80`} id={id}>
+                {user_settings[id].cards.map((item, index) => (
+                    <Card
+                        key={index}
+                        className={`${item.size} ${item.color} ${item.translate} ${item.z_index}`}
+                    />
+                ))}
+                {user_settings[id].texts.map((item, index) => (
+                    <h4 className={`transition ease-in-out duration-500 !transform-gpu ${item.size} ${item.translate} ${item.z_index}`}>
+                        {item.text}
+                    </h4>
+                ))}
             </div>
+            {id == "Brenda" && <Name id={id} className="col-start-5 col-end-7"/>}
+        </div>
     )
 }
 
 
 function Card({className}: { className: string }) {
     return (
-        <div className={`absolute aspect-[5/8] rounded-3xl bg-center bg-cover transform-gpu ${className}`}></div>
+        <div className={`absolute aspect-[5/8] rounded-3xl bg-center bg-cover ring-8 origin-bottom transition ease-in-out duration-500 !transform-gpu ${className}`}></div>
     );
 }
 
 function Name({id, className}: { id: string, className: string }) {
     return (
         <div className={`${className}`}>
-
             <h1 className="text-9xl p-5 -tracking-[.1em]">
-                {id.toUpperCase()=="BRENDA" &&
+                {id.toUpperCase() == "BRENDA" &&
                     <>
                         <span className="text-amber-700">B</span>
                         <span className="text-orange-400">R</span>
@@ -242,7 +264,7 @@ function Name({id, className}: { id: string, className: string }) {
                         <span className="text-fuchsia-700">A</span>
                     </>
                 }
-                {id.toUpperCase()=="JOAO" &&
+                {id.toUpperCase() == "JOAO" &&
                     <>
                         <span className="text-red-600">J</span>
                         <span className="text-orange-500">O</span>
