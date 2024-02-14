@@ -2,6 +2,7 @@ import React from "react";
 
 import {Header} from './components/header.tsx';
 import {Hero} from './components/hero.tsx';
+import {Footer} from './components/footer.tsx';
 
 
 export function App() {
@@ -9,6 +10,7 @@ export function App() {
         <>
             <Header/>
             <Hero/>
+            <Footer/>
         </>
     )
 }
