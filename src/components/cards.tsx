@@ -27,9 +27,9 @@ const user_settings: {
                 "z_index": "z-[70]"
             }, {
                 "size": "w-48 lg:w-80",
-                "color": `ring-amber-300 
-                    bg-[image:linear-gradient(to_bottom,theme(colors.amber.300/20%),theme(colors.amber.300/20%)),url(/img/brenda_img2.jpg)]
-                    bg-amber-300`,
+                "color": `ring-amber-400 
+                    bg-[image:linear-gradient(to_bottom,theme(colors.amber.300/10%),theme(colors.amber.400/10%)),url(/img/brenda_img2.jpg)]
+                    bg-amber-400`,
                 "translate": `translate-x-2 -rotate-6 
                         group-[.spreadcards]/cards:rotate-0
                         group-[.spreadcards]/cards:-translate-x-72
@@ -38,7 +38,7 @@ const user_settings: {
             }, {
                 "size": "w-48 lg:w-80",
                 "color": `ring-lime-700 
-                    bg-[image:linear-gradient(to_bottom,theme(colors.lime.700/20%),theme(colors.lime.700/20%)),url(/img/brenda_img3.jpg)]
+                    bg-[image:linear-gradient(to_bottom,theme(colors.lime.700/10%),theme(colors.lime.700/10%)),url(/img/brenda_img3.jpg)]
                     bg-lime-700`,
                 "translate": `-translate-x-3 rotate-6 
                         group-[.spreadcards]/cards:-rotate-12
@@ -48,7 +48,7 @@ const user_settings: {
             }, {
                 "size": "w-48 lg:w-80",
                 "color": `ring-blue-700
-                     bg-[image:linear-gradient(to_bottom,theme(colors.blue.700/20%),theme(colors.blue.700/20%)),url(/img/brenda_img4.jpg)]
+                     bg-[image:linear-gradient(to_bottom,theme(colors.blue.700/10%),theme(colors.blue.700/10%)),url(/img/brenda_img4.jpg)]
                      bg-blue-700`,
                 "translate": `-translate-x-2 rotate-6
                         group-[.spreadcards]/cards:-rotate-[21deg]
@@ -58,9 +58,9 @@ const user_settings: {
             },
             {
                 "size": "w-28 lg:w-28",
-                "color": `ring-amber-700
-                     bg-[image:linear-gradient(to_bottom,theme(colors.amber.700/20%),theme(colors.amber.700/20%)),url(/img/brenda_img5.jpg)]
-                     bg-amber-700`,
+                "color": `ring-fuchsia-700
+                     bg-[image:linear-gradient(to_bottom,theme(colors.amber.700/10%),theme(colors.fuchsia.700/10%)),url(/img/brenda_img5.jpg)]
+                     bg-fuchsia-700`,
                 "translate": `translate-x-0 rotate-0 
                         group-[.spreadcards]/cards:rotate-12 
                         group-[.spreadcards]/cards:-translate-x-[58rem]
@@ -68,9 +68,9 @@ const user_settings: {
                 "z_index": "z-20"
             }, {
                 "size": "w-28 lg:w-28",
-                "color": `ring-amber-400
-                     bg-[image:linear-gradient(to_bottom,theme(colors.amber.400/20%),theme(colors.amber.400/20%)),url(/img/brenda_img6.jpg)]
-                     bg-amber-400`,
+                "color": `ring-amber-300
+                     bg-[image:linear-gradient(to_bottom,theme(colors.amber.400/10%),theme(colors.amber.300/10%)),url(/img/brenda_img6.jpg)]
+                     bg-amber-300`,
                 "translate": `translate-x-2 -rotate-6 
                         group-[.spreadcards]/cards:-rotate-45
                         group-[.spreadcards]/cards:-translate-x-60 
@@ -79,7 +79,7 @@ const user_settings: {
             }, {
                 "size": "w-28 lg:w-28",
                 "color": `ring-lime-700
-                     bg-[image:linear-gradient(to_bottom,theme(colors.lime.700/20%),theme(colors.lime.700/20%)),url(/img/brenda_img7.jpg)]
+                     bg-[image:linear-gradient(to_bottom,theme(colors.lime.700/10%),theme(colors.lime.700/10%)),url(/img/brenda_img7.jpg)]
                      bg-lime-700`,
                 "translate": `-translate-x-3 rotate-6 
                         group-[.spreadcards]/cards:rotate-[30deg]
@@ -176,7 +176,7 @@ const user_settings: {
             }, {
                 "size": "w-48 lg:w-80",
                 "color": `ring-amber-400
-                     bg-[image:linear-gradient(to_bottom,theme(colors.amber.400/20%),theme(colors.amber.400/20%)),url(/img/joao_img2.jpg)]
+                     bg-[image:linear-gradient(to_bottom,theme(colors.amber.400/10%),theme(colors.amber.400/10%)),url(/img/joao_img2.jpg)]
                      bg-amber-400`,
                 "translate": `translate-x-2 -rotate-6 
                         group-[.spreadcards]/cards:rotate-0
@@ -186,7 +186,7 @@ const user_settings: {
             }, {
                 "size": "w-48 lg:w-80",
                 "color": `ring-lime-700
-                     bg-[image:linear-gradient(to_bottom,theme(colors.lime.700/20%),theme(colors.lime.700/20%)),url(/img/joao_img3.jpg)]
+                     bg-[image:linear-gradient(to_bottom,theme(colors.lime.700/10%),theme(colors.lime.700/10%)),url(/img/joao_img3.jpg)]
                      bg-lime-700`,
                 "translate": `-translate-x-3 rotate-6 
                         group-[.spreadcards]/cards:rotate-12
@@ -196,7 +196,7 @@ const user_settings: {
             }, {
                 "size": "w-48 lg:w-80",
                 "color": `ring-blue-700
-                     bg-[image:linear-gradient(to_bottom,theme(colors.blue.700/20%),theme(colors.blue.700/20%)),url(/img/joao_img4.jpg)]
+                     bg-[image:linear-gradient(to_bottom,theme(colors.blue.700/10%),theme(colors.blue.700/10%)),url(/img/joao_img4.jpg)]
                      bg-blue-700`,
                 "translate": `-translate-x-3 rotate-3
                         group-[.spreadcards]/cards:rotate-[21deg]
@@ -207,7 +207,7 @@ const user_settings: {
             {
                 "size": "w-28 lg:w-28",
                 "color": `ring-red-600
-                     bg-[image:linear-gradient(to_bottom,theme(colors.red.600/20%),theme(colors.red.600/20%)),url(/img/joao_img5.jpg)]
+                     bg-[image:linear-gradient(to_bottom,theme(colors.red.600/10%),theme(colors.red.600/10%)),url(/img/joao_img5.jpg)]
                      bg-red-600`,
                 "translate": `translate-x-0 rotate-0 
                         group-[.spreadcards]/cards:-rotate-12 
@@ -217,7 +217,7 @@ const user_settings: {
             }, {
                 "size": "w-28 lg:w-28",
                 "color": `ring-amber-300
-                     bg-[image:linear-gradient(to_bottom,theme(colors.amber.300/20%),theme(colors.amber.300/20%)),url(/img/joao_img6.jpg)]
+                     bg-[image:linear-gradient(to_bottom,theme(colors.amber.300/10%),theme(colors.amber.300/10%)),url(/img/joao_img6.jpg)]
                      bg-amber-300`,
                 "translate": `translate-x-2 -rotate-6 
                         group-[.spreadcards]/cards:rotate-45
@@ -227,7 +227,7 @@ const user_settings: {
             }, {
                 "size": "w-28 lg:w-28",
                 "color": `ring-lime-700
-                     bg-[image:linear-gradient(to_bottom,theme(colors.lime.700/20%),theme(colors.lime.700/20%)),url(/img/joao_img7.jpg)]
+                     bg-[image:linear-gradient(to_bottom,theme(colors.lime.700/10%),theme(colors.lime.700/10%)),url(/img/joao_img7.jpg)]
                      bg-lime-700`,
                 "translate": `-translate-x-3 rotate-6 
                         group-[.spreadcards]/cards:-rotate-[57deg]
