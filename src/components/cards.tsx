@@ -91,6 +91,7 @@ const user_settings: {
         "texts": [
             {
                 "text": "\n Actress",
+                "link": "mailto:brenda@lima.dev",
                 "size": "text-6xl text-left inline-block align-text-bottom whitespace-pre-line",
                 "translate": `absolute -translate-x-40 -translate-y-10 -rotate-[70deg]
                         group-[.spreadcards]/cards:rotate-0
@@ -100,6 +101,7 @@ const user_settings: {
             },
             {
                 "text": "\n Influencer",
+                "link": "mailto:brenda@lima.dev",
                 "size": "text-6xl text-left inline-block align-text-bottom whitespace-pre-line",
                 "translate": `absolute -translate-x-28 translate-y-[25rem] rotate-[16deg]
                         group-[.spreadcards]/cards:rotate-0
@@ -109,6 +111,7 @@ const user_settings: {
             },
             {
                 "text": "Event \n Organizer",
+                "link": "mailto:brenda@lima.dev",
                 "size": "text-6xl text-left inline-block align-text-baseline whitespace-pre-line",
                 "translate": `absolute -translate-x-2 translate-y-20 -rotate-[85deg]
                         group-[.spreadcards]/cards:rotate-0
@@ -116,32 +119,42 @@ const user_settings: {
                         group-[.spreadcards]/cards:translate-y-[33rem]`,
                 "z_index": "z-[60]"
             },
+            {
+                "text": "Brenda@Lima.dev",
+                "link": "mailto:brenda@lima.dev",
+                "size": "text-4xl text-neutral-400 text-left inline-block align-text-baseline whitespace-pre-line",
+                "translate": `absolute -translate-x-10 translate-y-20 -rotate-[85deg]
+                        group-[.spreadcards]/cards:rotate-0
+                        group-[.spreadcards]/cards:-translate-x-[33rem]
+                        group-[.spreadcards]/cards:translate-y-[43rem]`,
+                "z_index": "z-[60]"
+            },
         ],
         "icons": [
             {
                 "icon": faInstagram,
-                "color": "group-hover:text-[#C13584]",
+                "color": "text-neutral-400 group-hover:text-[#C13584]",
                 "size": "4x",
                 "rotate": "-rotate-[78deg]",
                 "link": "https://www.instagram.com/breranja/",
             },
             {
                 "icon": faLinkedinIn,
-                "color": "group-hover:text-[#0A66C2]",
+                "color": "text-neutral-400 group-hover:text-[#0A66C2]",
                 "size": "4x",
                 "rotate": "-rotate-[10deg]",
                 "link": "https://www.linkedin.com/in/brendalimas/",
             },
             {
                 "icon": faBehance,
-                "color": "group-hover:text-[#1769FF]",
+                "color": "text-neutral-400 group-hover:text-[#1769FF]",
                 "size": "4x",
                 "rotate": "rotate-6",
                 "link": "",
             },
             {
                 "icon": faLink,
-                "color": "group-hover:text-[#41E661]",
+                "color": "text-neutral-400 group-hover:text-[#41E661]",
                 "size": "4x",
                 "rotate": "rotate-[80deg]",
                 "link": "",
@@ -226,6 +239,7 @@ const user_settings: {
         "texts": [
             {
                 "text": "\n BeatMaker",
+                "link": "mailto:joao@lima.dev",
                 "size": "text-6xl text-left inline-block align-text-bottom whitespace-pre-line",
                 "translate": `absolute -translate-x-40 -rotate-[70deg]
                         group-[.spreadcards]/cards:rotate-0
@@ -235,6 +249,7 @@ const user_settings: {
             },
             {
                 "text": "\n Programmer",
+                "link": "mailto:joao@lima.dev",
                 "size": "text-6xl text-left inline-block align-text-bottom whitespace-pre-line",
                 "translate": `absolute -translate-x-48 translate-y-[25rem] rotate-6
                         group-[.spreadcards]/cards:rotate-0
@@ -244,6 +259,7 @@ const user_settings: {
             },
             {
                 "text": "\n Drummer",
+                "link": "mailto:joao@lima.dev",
                 "size": "text-6xl text-left inline-block align-text-baseline whitespace-pre-line",
                 "translate": `absolute -translate-x-[21rem] translate-y-20 -rotate-[85deg]
                         group-[.spreadcards]/cards:rotate-0
@@ -251,32 +267,42 @@ const user_settings: {
                         group-[.spreadcards]/cards:translate-y-[33rem]`,
                 "z_index": "z-[60]"
             },
+            {
+                "text": "Joao@Lima.dev",
+                "link": "mailto:joao@lima.dev",
+                "size": "text-4xl text-neutral-400 text-left inline-block align-text-baseline whitespace-pre-line",
+                "translate": `absolute -translate-x-40 -rotate-[70deg]
+                        group-[.spreadcards]/cards:rotate-0
+                        group-[.spreadcards]/cards:translate-x-72
+                        group-[.spreadcards]/cards:translate-y-[43rem]`,
+                "z_index": "z-[60]"
+            },
         ],
         "icons": [
             {
                 "icon": faInstagram,
-                "color": "group-hover:text-[#C13584]",
+                "color": "text-neutral-400 group-hover:text-[#C13584]",
                 "size": "4x",
                 "rotate": "-rotate-[15deg]",
                 "link": "https://www.instagram.com/lima.haru/",
             },
             {
                 "icon": faLinkedinIn,
-                "color": "group-hover:text-[#0A66C2]",
+                "color": "text-neutral-400 group-hover:text-[#0A66C2]",
                 "size": "4x",
                 "rotate": "rotate-[14deg]",
                 "link": "https://www.linkedin.com/in/limadeveloper/",
             },
             {
                 "icon": faGithub,
-                "color": "group-hover:text-[#4078C0]",
+                "color": "text-neutral-400 group-hover:text-[#4078C0]",
                 "size": "4x",
                 "rotate": "rotate-[13deg]",
                 "link": "https://github.com/JoaoVLima",
             },
             {
                 "icon": faLink,
-                "color": "group-hover:text-[#41E661]",
+                "color": "text-neutral-400 group-hover:text-[#41E661]",
                 "size": "4x",
                 "rotate": "-rotate-[115deg]",
                 "link": "https://linktr.ee/limaharu",
@@ -298,9 +324,11 @@ export function Cards({id}: { id: string }) {
                     />
                 ))}
                 {user_settings[id].texts.map((item, index) => (
-                    <h4 className={`transition ease-in-out duration-500 !transform-gpu ${item.size} ${item.translate} ${item.z_index}`}>
-                        {item.text as string}
-                    </h4>
+                    <a href={`${item.link}`}>
+                        <h4 className={`transition ease-in-out duration-500 !transform-gpu ${item.size} ${item.translate} ${item.z_index}`}>
+                            {item.text as string}
+                        </h4>
+                    </a>
                 ))}
             </div>
             {id == "Brenda" && <Name id={id} className="col-start-5 col-end-7"/>}
