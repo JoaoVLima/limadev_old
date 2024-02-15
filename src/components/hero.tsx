@@ -10,7 +10,7 @@ export function Hero() {
     return (
         <>
             {!window.location.hash && <SwipeHand/>}
-            <div className="px-1 pt-28 pb-10 h-screen min-h-[950px] lg:px-2">
+            <div className="px-1 pt-28 pb-10 h-screen min-h-[1024px] lg:px-2">
                 <Swiper
                     className="h-full w-full"
                     slidesPerView={"auto"}
