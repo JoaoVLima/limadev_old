@@ -90,11 +90,11 @@ const user_settings: {
         ],
         "texts": [
             {
-                "text": "\n Singer",
+                "text": "\n Actress",
                 "size": "text-6xl text-left inline-block align-text-bottom whitespace-pre-line",
                 "translate": `absolute -translate-x-40 -translate-y-10 -rotate-[70deg]
                         group-[.spreadcards]/cards:rotate-0
-                        group-[.spreadcards]/cards:-translate-x-[60rem]
+                        group-[.spreadcards]/cards:-translate-x-[61rem]
                         group-[.spreadcards]/cards:translate-y-[33rem]`,
                 "z_index": "z-20"
             },
