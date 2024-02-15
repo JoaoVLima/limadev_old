@@ -126,7 +126,7 @@ const user_settings: {
                 "translate": `absolute -translate-x-10 translate-y-20 -rotate-[85deg]
                         group-[.spreadcards]/cards:rotate-0
                         group-[.spreadcards]/cards:-translate-x-[33rem]
-                        group-[.spreadcards]/cards:translate-y-[43rem]`,
+                        group-[.spreadcards]/cards:translate-y-[44rem]`,
                 "z_index": "z-[60]"
             },
         ],
@@ -274,7 +274,7 @@ const user_settings: {
                 "translate": `absolute -translate-x-40 -rotate-[70deg]
                         group-[.spreadcards]/cards:rotate-0
                         group-[.spreadcards]/cards:translate-x-72
-                        group-[.spreadcards]/cards:translate-y-[43rem]`,
+                        group-[.spreadcards]/cards:translate-y-[44rem]`,
                 "z_index": "z-[60]"
             },
         ],
