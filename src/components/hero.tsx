@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React from 'react';
 
 import {Swiper, SwiperSlide} from 'swiper/react';
 import {Keyboard, Mousewheel, HashNavigation} from 'swiper/modules';
@@ -37,13 +37,13 @@ export function Hero() {
                     onSlideChangeTransitionEnd={SpreadCards}
                     // onProgress={(swiper, progress) => {console.log(progress)}}
                 >
-                    <SwiperSlide className="rounded-3xl bg-neutral-900/70 text-center text-white" data-hash="Brenda">
+                    <SwiperSlide className="rounded-3xl bg-neutral-200/70 dark:bg-neutral-900/70 text-center text-black dark:text-white" data-hash="Brenda">
                         <Cards id="Brenda"/>
                     </SwiperSlide>
                     <SwiperSlide className="!w-12" data-hash=" ">
                         {/* Middle */}
                     </SwiperSlide>
-                    <SwiperSlide className="rounded-3xl bg-neutral-900/70 text-center text-white" data-hash="Joao">
+                    <SwiperSlide className="rounded-3xl bg-neutral-200/70 dark:bg-neutral-900/70 text-center text-black dark:text-white" data-hash="Joao">
                         <Cards id="Joao"/>
                     </SwiperSlide>
                 </Swiper>

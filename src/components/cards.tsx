@@ -133,28 +133,28 @@ const user_settings: {
         "icons": [
             {
                 "icon": faInstagram,
-                "color": "text-neutral-400 group-hover:text-[#C13584]",
+                "color": "text-neutral-700 dark:text-neutral-400 group-hover:text-[#C13584]",
                 "size": "4x",
                 "rotate": "-rotate-[78deg]",
                 "link": "https://www.instagram.com/breranja/",
             },
             {
                 "icon": faLinkedinIn,
-                "color": "text-neutral-400 group-hover:text-[#0A66C2]",
+                "color": "text-neutral-700 dark:text-neutral-400 group-hover:text-[#0A66C2]",
                 "size": "4x",
                 "rotate": "-rotate-[10deg]",
                 "link": "https://www.linkedin.com/in/brendalimas/",
             },
             {
                 "icon": faBehance,
-                "color": "text-neutral-400 group-hover:text-[#1769FF]",
+                "color": "text-neutral-700 dark:text-neutral-400 group-hover:text-[#1769FF]",
                 "size": "4x",
                 "rotate": "rotate-6",
                 "link": "",
             },
             {
                 "icon": faLink,
-                "color": "text-neutral-400 group-hover:text-[#41E661]",
+                "color": "text-neutral-700 dark:text-neutral-400 group-hover:text-[#41E661]",
                 "size": "4x",
                 "rotate": "rotate-[80deg]",
                 "link": "",
@@ -281,28 +281,28 @@ const user_settings: {
         "icons": [
             {
                 "icon": faInstagram,
-                "color": "text-neutral-400 group-hover:text-[#C13584]",
+                "color": "text-neutral-700 dark:text-neutral-400 group-hover:text-[#C13584]",
                 "size": "4x",
                 "rotate": "-rotate-[15deg]",
                 "link": "https://www.instagram.com/lima.haru/",
             },
             {
                 "icon": faLinkedinIn,
-                "color": "text-neutral-400 group-hover:text-[#0A66C2]",
+                "color": "text-neutral-700 dark:text-neutral-400 group-hover:text-[#0A66C2]",
                 "size": "4x",
                 "rotate": "rotate-[14deg]",
                 "link": "https://www.linkedin.com/in/limadeveloper/",
             },
             {
                 "icon": faGithub,
-                "color": "text-neutral-400 group-hover:text-[#4078C0]",
+                "color": "text-neutral-700 dark:text-neutral-400 group-hover:text-[#4078C0]",
                 "size": "4x",
                 "rotate": "rotate-[13deg]",
                 "link": "https://github.com/JoaoVLima",
             },
             {
                 "icon": faLink,
-                "color": "text-neutral-400 group-hover:text-[#41E661]",
+                "color": "text-neutral-700 dark:text-neutral-400 group-hover:text-[#41E661]",
                 "size": "4x",
                 "rotate": "-rotate-[115deg]",
                 "link": "https://linktr.ee/limaharu",
@@ -323,9 +323,9 @@ export function Cards({id}: { id: string }) {
                         className={`${item.size} ${item.color} ${item.translate} ${item.z_index}`}
                     />
                 ))}
-                {user_settings[id].texts.map((item, index) => (
+                {user_settings[id].texts.map((item) => (
                     <a href={`${item.link}`}>
-                        <h4 className={`transition ease-in-out duration-500 !transform-gpu ${item.size} ${item.translate} ${item.z_index}`}>
+                        <h4 className={`transition ease-in-out duration-500 !transform-gpu drop-shadow-[4px_4px_white] dark:drop-shadow-none ${item.size} ${item.translate} ${item.z_index}`}>
                             {item.text as string}
                         </h4>
                     </a>
@@ -347,7 +347,7 @@ function Name({id, className}: { id: string, className: string }) {
     return (
         <>
             <div className={`${className} row-start-2 row-end-2`}>
-                <h1 className="text-9xl -tracking-[.1em]">
+                <h1 className="text-9xl drop-shadow-[4px_4px_silver] dark:drop-shadow-none -tracking-[.1em]">
                     {id.toUpperCase() == "BRENDA" &&
                         <>
                             <span className="text-amber-700">B</span>
@@ -376,11 +376,11 @@ function Name({id, className}: { id: string, className: string }) {
             </div>
             <div className={`${className} row-start-3 row-end-4 place-self-center justify-self-center`}>
                 <div className="relative flex place-items-center justify-items-center gap-12">
-                    {user_settings[id].icons.map((item, index) => (
+                    {user_settings[id].icons.map((item) => (
                         <a className="group" href={`${item.link}`} target="_blank" rel="noopener noreferrer">
                             <div className={`aspect-[5/7] w-20 ${item.rotate} grid place-items-center justify-items-center`}>
                                 <FontAwesomeIcon className={`${item.color}`} icon={item.icon as IconDefinition} size={`${item.size}` as SizeProp}></FontAwesomeIcon>
-                                <div className={`absolute top-0 aspect-[5/7] w-20 -z-10 rounded-3xl bg-neutral-800 ${item.rotate}`}></div>
+                                <div className={`absolute top-0 aspect-[5/7] w-20 -z-10 rounded-3xl bg-neutral-300 dark:bg-neutral-800 ${item.rotate}`}></div>
                             </div>
                         </a>
                     ))}
