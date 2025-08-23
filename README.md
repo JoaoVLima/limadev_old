@@ -4,3 +4,12 @@
 <img width="1436" alt="image" src="https://github.com/user-attachments/assets/c3650875-fce1-49a0-8392-671b86009f97">
 <img width="1436" alt="image" src="https://github.com/user-attachments/assets/43e87ed9-fa4d-4e78-9a6d-608fcb33b5a5">
 <img width="1436" alt="image" src="https://github.com/user-attachments/assets/5c63d854-de95-4630-b077-4cc785539b63">
+
+
+
+---
+Just out of curiosity, this was the original design, inspired in old furniture design, made with ThreeJS, a complete 3d scene.
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/5a4479b2-e683-4c0b-acae-58b7962208f0" />
+
+https://github.com/user-attachments/assets/35865b1e-486a-4041-bc0c-a22bf9a950e6
+
