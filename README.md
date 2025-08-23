@@ -10,6 +10,7 @@
 ---
 Just out of curiosity, this was the original design, inspired in old furniture design, made with ThreeJS, a complete 3d scene.
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/5a4479b2-e683-4c0b-acae-58b7962208f0" />
-
+3D Models from The Hallwyl Museum in Stockholm, Sweden.
 https://github.com/user-attachments/assets/35865b1e-486a-4041-bc0c-a22bf9a950e6
+
 
